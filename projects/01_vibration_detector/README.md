@@ -4,14 +4,26 @@
 
 Can a small rotating imbalance be detected from vibration data?
 
-## First experiment
+## What this project does
 
-Start with a simple rotating system and generate a vibration signal from an off-center mass.
+This project simulates the radial force produced by an off-center rotating mass.
 
-We will compare different imbalance levels and rotation speeds, then inspect what changes in the signal.
+It compares three imbalance levels at the same rotation speed:
 
-## Current stage
+- Low imbalance
+- Baseline imbalance
+- High imbalance
 
-**Stage 1:** basic signal simulation.
+The simulation checks peak vibration force and dominant vibration frequency.
 
-No machine-learning model is used yet.
+## Result
+
+At the same rotation speed, increasing the imbalance increases the vibration amplitude while the main vibration frequency remains tied to the rotation speed.
+
+![Vibration comparison](results/vibration_comparison.svg)
+
+This is the first baseline experiment. The signal is ideal and contains no measurement noise.
+
+## Next step
+
+Add noise and background vibration, then test whether the imbalance can still be detected.
